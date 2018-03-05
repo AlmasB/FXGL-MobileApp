@@ -34,7 +34,8 @@ allprojects{
 }
 
 dependencies {
-    compile 'com.github.almasb:fxgl:1M-SNAPSHOT'
+    compile 'com.github.almasb:fxgl:0.4.4-SNAPSHOT'
+    compile 'com.github.almasb:fxgl-plugin-audio-android:0.0.2-SNAPSHOT'
 }
 
 jfxmobile {
@@ -45,7 +46,7 @@ jfxmobile {
     android {
         minSdkVersion '21'
         compileSdkVersion '25'
-        androidSdk = 'C:/Users/Almas/almas_program_files/android-sdk'
+        //androidSdk = 'PATH_TO_ANDROID_SDK'
         manifest = 'src/android/AndroidManifest.xml'
         packagingOptions {
             exclude 'META-INF/DEPENDENCIES'

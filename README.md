@@ -20,7 +20,15 @@ ANDROID_SDK/tools/bin/sdkmanager "platform-tools" "build-tools;27.0.3" "platform
 your `android-sdk` is extracted:
 
 ```
-androidSdk = 'C:/Users/Almas/almas_program_files/android-sdk'
+androidSdk = 'PATH_TO_ANDROID_SDK'
+```
+
+OR
+
+Define a global gradle property named `ANDROID_HOME` inside `~/.gradle/gradle.properties` that points to the location of the Android SDK:
+
+```
+ANDROID_HOME=/path/to/android-sdk-directory
 ```
 
 4. Build .apk (will be built to "build/javafxports/android/"):
