@@ -34,8 +34,8 @@ allprojects{
 }
 
 dependencies {
-    compile 'com.github.almasb:fxgl:0.4.4-SNAPSHOT'
-    compile 'com.github.almasb:fxgl-plugin-audio-android:0.0.2-SNAPSHOT'
+    compile 'com.github.almasb:fxgl:0.5.0-SNAPSHOT'
+    compile 'com.github.almasb:fxgl-plugin-audio-android:0.0.2'
 }
 
 jfxmobile {
