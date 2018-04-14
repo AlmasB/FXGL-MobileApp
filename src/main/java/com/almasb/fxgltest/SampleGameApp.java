@@ -6,7 +6,7 @@ import com.almasb.fxgl.entity.Entities;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.component.Component;
 import com.almasb.fxgl.entity.components.CollidableComponent;
-import com.almasb.fxgl.extra.entity.components.OffscreenCleanControl;
+import com.almasb.fxgl.extra.entity.components.OffscreenCleanComponent;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.settings.GameSettings;
 import javafx.util.Duration;
@@ -75,7 +75,7 @@ public class SampleGameApp extends GameApplication {
                 .type(DropType.DROPLET)
                 .viewFromTextureWithBBox("droplet.png")
                 .with(new CollidableComponent(true))
-                .with(new OffscreenCleanControl())
+                .with(new OffscreenCleanComponent())
                 .buildAndAttach();
     }
 
