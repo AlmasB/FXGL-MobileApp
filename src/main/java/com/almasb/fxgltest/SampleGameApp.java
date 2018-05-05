@@ -11,6 +11,8 @@ import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.settings.GameSettings;
 import javafx.util.Duration;
 
+import java.util.List;
+
 import static com.almasb.fxgl.app.DSLKt.loopBGM;
 import static com.almasb.fxgl.app.DSLKt.play;
 
@@ -26,6 +28,7 @@ public class SampleGameApp extends GameApplication {
         settings.setVersion("1.0");
         settings.setWidth(480);
         settings.setHeight(800);
+        settings.setIntroEnabled(true);
     }
 
     @Override
@@ -56,7 +59,10 @@ public class SampleGameApp extends GameApplication {
 
     @Override
     protected void onUpdate(double tpf) {
-        getGameWorld().getEntitiesByType(DropType.DROPLET).forEach(droplet -> droplet.translateY(150 * tpf));
+        List<Entity> droplets = getGameWorld().getEntitiesByType(DropType.DROPLET);
+        for (Entity droplet : droplets) {
+            droplet.translateY(150 * tpf);
+        }
     }
 
     private void spawnBucket() {
