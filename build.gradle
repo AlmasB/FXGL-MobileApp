@@ -34,7 +34,7 @@ allprojects{
 }
 
 dependencies {
-    compile 'com.github.almasb:fxgl:0.5.0-SNAPSHOT'
+    compile 'com.github.almasb:fxgl:0.5.1-SNAPSHOT'
     compile 'com.github.almasb:fxgl-plugin-audio-android:0.0.2'
 }
 
@@ -60,5 +60,15 @@ jfxmobile {
             exclude 'META-INF/notice.txt'
             exclude 'META-INF/INDEX.LIST'
         }
+    }
+    ios {
+        infoPList = file('src/ios/Default-Info.plist')
+        forceLinkClasses = [
+                'com.gluonhq.**.*',
+                'javax.annotations.**.*',
+                'javax.inject.**.*',
+                'javax.json.**.*',
+                'org.glassfish.json.**.*'
+        ]
     }
 }
