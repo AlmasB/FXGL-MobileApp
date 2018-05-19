@@ -34,7 +34,7 @@ allprojects{
 }
 
 dependencies {
-    compile 'com.github.almasb:fxgl:0.5.1-SNAPSHOT'
+    compile 'com.github.almasb:fxgl:0.5.1'
     compile 'com.github.almasb:fxgl-plugin-audio-android:0.0.2'
 }
 
